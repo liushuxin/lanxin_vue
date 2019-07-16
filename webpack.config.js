@@ -39,7 +39,7 @@ module.exports = {
       },
       
         {test:/\.vue$/, loader:'vue-loader'},
-        {test:/\.js$/, loader:'babel-loader', exclude:/node_modules/}//设置node_modules里的js文件不用解析
+       // {test:/\.js$/, loader:'babel-loader', exclude:/node_modules/}//设置node_modules里的js文件不用解析
 
     ]
   },
