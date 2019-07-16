@@ -1,6 +1,6 @@
 <template>
   <header class="header-wrapper">
-    <h1>{{msg}}</h1>
+    <h3>{{msg}}</h3>
   </header>
 </template>
 <script>
@@ -12,3 +12,12 @@
         }
     }
 </script>
+<style rel="stylesheet" type="text/css" lang="less" scoped>
+.header-wrapper{
+    background: gold;
+    display:flex;
+    justify-content: center;
+    color:white;
+}
+    
+</style>

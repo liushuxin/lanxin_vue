@@ -37,10 +37,18 @@ module.exports = {
           loader: 'less-loader' // compiles Less to CSS
         }]
       },
-      
-        {test:/\.vue$/, loader:'vue-loader'},
+      {test:/\.vue$/, loader:'vue-loader'},
        // {test:/\.js$/, loader:'babel-loader', exclude:/node_modules/}//设置node_modules里的js文件不用解析
-
+       {
+        test: /\.less$/,
+        use: [{
+          loader: 'style-loader' // creates style nodes from JS strings
+        }, {
+          loader: 'css-loader' // translates CSS into CommonJS
+        }, {
+          loader: 'less-loader' // compiles Less to CSS
+        }]
+      }
     ]
   },
    
