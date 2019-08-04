@@ -48,8 +48,22 @@ module.exports = {
         }, {
           loader: 'less-loader' // compiles Less to CSS
         }]
-      }
-    ]
+      },
+      {
+        test: /\.css$/,
+        use: [{
+          loader: 'style-loader' // creates style nodes from JS strings
+        }, {
+          loader: 'css-loader' // translates CSS into CommonJS
+        }]
+      },
+      {
+        test: /\.(eot|woff2?|ttf|svg)$/,
+        use: [
+          {
+            loader: "url-loader",
+          }
+    ]},]
   },
    
   devtool: "source-map", // enum  // 通过在浏览器调试工具(browser devtools)中添加元信息(meta info)增强调试
